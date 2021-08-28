@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-public class Script1 {
+public class Script2 {
 WebDriver d1;
 @Given("open chrome browser and url of the application")
 public void open_chrome_browser_and_url_of_the_application() {

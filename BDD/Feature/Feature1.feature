@@ -1,5 +1,5 @@
-Feature:To test the Ksrtc application
-Scenario:to test the login page of Ksrtc
+Feature:To test the PHP application
+Scenario:to test the login page of PHP
 Given open chrome browser and url of the application
 When enter username and password
 Then Login success
