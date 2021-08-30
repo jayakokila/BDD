@@ -18,6 +18,7 @@ System.out.println("given done");
 @When("enter username and password")
 public void enter_username_and_password() {
 // Write code here that turns the phrase above into concrete actions
+	d1.findElement(By.xpath("/html/body/div/center/table/tbody/tr[2]/td/div/center/table/tbody/tr/td[2]/p/small/a[4]")).click();
 d1.findElement(By.xpath("/html/body/table/tbody/tr/td[1]/form/div/center/table/tbody/tr/td[1]/table/tbody/tr[1]/td[2]/p/input")).sendKeys("123456");
 d1.findElement(By.xpath("/html/body/table/tbody/tr/td[1]/form/div/center/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/p/input")).sendKeys("123456");
 System.out.println("when done");
@@ -27,6 +28,22 @@ public void login_success() {
 // Write code here that turns the phrase above into concrete actions
 d1.findElement(By.xpath("/html/body/table/tbody/tr/td[1]/form/div/center/table/tbody/tr/td[1]/table/tbody/tr[3]/td[2]/p/input")).click();
 System.out.println("then done");
+d1.close();
+}
+@When("enter invalid username and invalid password")
+public void enter_invalidusername_and_invalidpassword() {
+// Write code here that turns the phrase above into concrete actions
+	d1.findElement(By.xpath("/html/body/div/center/table/tbody/tr[2]/td/div/center/table/tbody/tr/td[2]/p/small/a[4]")).click();
+d1.findElement(By.xpath("/html/body/table/tbody/tr/td[1]/form/div/center/table/tbody/tr/td[1]/table/tbody/tr[1]/td[2]/p/input")).sendKeys("1234556");
+d1.findElement(By.xpath("/html/body/table/tbody/tr/td[1]/form/div/center/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/p/input")).sendKeys("1234556");
+System.out.println("when done");
+}
+@Then("Login Unsuccessful")
+public void login_Unsuccessful() {
+// Write code here that turns the phrase above into concrete actions
+d1.findElement(By.xpath("/html/body/table/tbody/tr/td[1]/form/div/center/table/tbody/tr/td[1]/table/tbody/tr[3]/td[2]/p/input")).click();
+System.out.println("then done");
+d1.close();
 }
 }
 
